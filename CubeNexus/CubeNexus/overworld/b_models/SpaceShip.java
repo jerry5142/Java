@@ -106,6 +106,12 @@ public class SpaceShip extends NoisyShape {
 	}
 
 	/**
+	 * @return
+	 */
+
+	/**
+	 * 
+	 * @param object
 	 * @return the playersStuff
 	 */
 	public boolean hasObject(OverWorldImages object) {

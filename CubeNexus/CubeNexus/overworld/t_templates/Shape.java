@@ -204,6 +204,7 @@ public abstract class Shape extends Rectangle implements DrawableShape {
 	/**
 	 * 
 	 * @param otherShape
+	 *            Shape object
 	 * @return true if this shape intersects otherShape
 	 */
 	@Override
@@ -238,6 +239,9 @@ public abstract class Shape extends Rectangle implements DrawableShape {
 
 	/**
 	 * shows the popup message
+	 * 
+	 * @param g
+	 *            Graphics instance
 	 */
 	public void showMessage(Graphics g) {
 		if (g == null)
@@ -282,7 +286,9 @@ public abstract class Shape extends Rectangle implements DrawableShape {
 	 * Sets the message point
 	 * 
 	 * @param x
+	 *            x-coordinate
 	 * @param y
+	 *            y-coordinate
 	 */
 	public void setMessagePoint(int x, int y) {
 		this.messagePoint.x = x;

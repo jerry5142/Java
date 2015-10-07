@@ -24,6 +24,7 @@ public interface DrawableShape {
 	/**
 	 * 
 	 * @param otherShape
+	 *            Shape
 	 * @return true if this shape intersects otherShape
 	 */
 	public boolean intersectsShape(Shape otherShape);

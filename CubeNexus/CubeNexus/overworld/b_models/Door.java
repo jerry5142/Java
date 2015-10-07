@@ -254,6 +254,8 @@ public class Door extends BoundedShape implements LauncherCallback {
 	/**
 	 * Moves the shape so that the door does not contain the shape's center
 	 * point.
+	 * 
+	 * @param shape
 	 */
 	public void moveShapeOutside(BoundedShape shape) {
 		switch (this.position) {

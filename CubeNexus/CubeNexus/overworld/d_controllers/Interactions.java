@@ -89,14 +89,10 @@ public class Interactions {
 		} else {
 			switch (shape.getImageType()) {
 			case ROBOT:
-				shape.showMessage(g);
-				break;
-
 			case WIZARD:
-				shape.showMessage(g);
-				break;
 
 			default:
+				shape.showMessage(g);
 				break;
 			}
 		}

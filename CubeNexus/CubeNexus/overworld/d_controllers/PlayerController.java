@@ -35,29 +35,15 @@ public class PlayerController implements KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent arg0) {
-		switch (arg0.getKeyCode()) {
-		case KeyEvent.VK_UP:
-			maze.getPlayer().setMoveUp(true);
-			break;
+		int key = arg0.getKeyCode();
 
-		case KeyEvent.VK_DOWN:
-			maze.getPlayer().setMoveDn(true);
-			break;
-
-		case KeyEvent.VK_LEFT:
-			maze.getPlayer().setMoveLt(true);
-			break;
-
-		case KeyEvent.VK_RIGHT:
-			maze.getPlayer().setMoveRt(true);
-			break;
-
+		switch (key) {
 		case KeyEvent.VK_EQUALS:
-			maze.getPlayer().setMoveSpeed(maze.getPlayer().getMoveSpeed() + 1);
+			setSpeed(1);
 			break;
 
 		case KeyEvent.VK_MINUS:
-			maze.getPlayer().setMoveSpeed(maze.getPlayer().getMoveSpeed() - 1);
+			setSpeed(-1);
 			break;
 
 		/*******************
@@ -68,30 +54,54 @@ public class PlayerController implements KeyListener {
 			break;
 
 		default:
-
+			setPlayerMove(key, true);
 		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
-		switch (arg0.getKeyCode()) {
+		int key = arg0.getKeyCode();
+
+		switch (key) {
+
+		default:
+			setPlayerMove(key, false);
+		}
+	}
+
+	/**
+	 * @param speedChange
+	 *            increment or decrement speed
+	 */
+	private void setSpeed(int speedChange) {
+		maze.getPlayer().setMoveSpeed(
+				maze.getPlayer().getMoveSpeed() + speedChange);
+	}
+
+	/**
+	 * 
+	 * @param key
+	 *            keyboard key code
+	 * @param moveIt
+	 *            true=move the player
+	 */
+	private void setPlayerMove(int key, boolean moveIt) {
+		switch (key) {
 		case KeyEvent.VK_UP:
-			maze.getPlayer().setMoveUp(false);
+			maze.getPlayer().setMoveUp(moveIt);
 			break;
 
 		case KeyEvent.VK_DOWN:
-			maze.getPlayer().setMoveDn(false);
+			maze.getPlayer().setMoveDn(moveIt);
 			break;
 
 		case KeyEvent.VK_LEFT:
-			maze.getPlayer().setMoveLt(false);
+			maze.getPlayer().setMoveLt(moveIt);
 			break;
 
 		case KeyEvent.VK_RIGHT:
-			maze.getPlayer().setMoveRt(false);
+			maze.getPlayer().setMoveRt(moveIt);
 			break;
-
-		default:
 		}
 	}
 

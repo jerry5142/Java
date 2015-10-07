@@ -47,7 +47,9 @@ public abstract class MoveableShape extends Shape {
 	 * Moves the shape by the specified increment
 	 * 
 	 * @param xIncr
+	 *            positive or negative change in the x-coordinate
 	 * @param yIncr
+	 *            positive or negative change in the y-coordinate
 	 * @return true if the shape was moved
 	 */
 	public boolean moveShape(int xIncr, int yIncr) {
@@ -73,6 +75,7 @@ public abstract class MoveableShape extends Shape {
 	 * Set to true if the shape is allowed to move
 	 * 
 	 * @param canMove
+	 *            determines if the shape is allowed to move
 	 */
 	public void setMoveable(boolean canMove) {
 		this.moveable = canMove;

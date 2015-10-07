@@ -151,9 +151,10 @@ public class Room {
 	}
 
 	/**
-	 * Returns the shape at index i. Returns null if no such shape exists.
 	 * 
 	 * @param i
+	 * @return Returns the shape at index i. Returns null if no such shape
+	 *         exists.
 	 */
 	public BoundedShape getShape(int i) {
 		if (isValidIndex(i, shapes))

@@ -13,8 +13,6 @@ import javax.swing.JMenuItem;
  * 
  * @author Jerry Swank
  * 
- * @param view
- *            any JFrame object
  */
 public abstract class Menus<T extends JFrame> implements ActionListener {
 	/**

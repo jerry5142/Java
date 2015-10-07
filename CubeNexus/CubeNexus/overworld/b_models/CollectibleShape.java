@@ -20,7 +20,7 @@ public class CollectibleShape extends BoundedShape {
 	/**
 	 * Constructor
 	 * 
-	 * @param x
+	 * @param x 
 	 * @param y
 	 * @param width
 	 * @param height

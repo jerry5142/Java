@@ -42,15 +42,17 @@ public class BoundedShape extends MoveableShape {
 	 * Constructor
 	 * 
 	 * @param x
-	 *            must be > 0
+	 *            must be greater than 0
 	 * @param y
-	 *            must be > 0
+	 *            must be greater than  0
 	 * @param width
-	 *            must satisfy: (x + width) < enclosure.width
+	 *            must satisfy: (x + width) is less than enclosure.width
 	 * @param height
-	 *            must satisfy: (y + height) < enclosure.height
+	 *            must satisfy: (y + height) is less than enclosure.height
 	 * @param imageType
+	 *            OverWorldImages - a registered image
 	 * @param popupMessage
+	 *            the message to display
 	 * @param enclosure
 	 *            the rectangle that this shape is confined to
 	 */
@@ -102,7 +104,9 @@ public class BoundedShape extends MoveableShape {
 	 * satisfied
 	 * 
 	 * @param x
+	 *            x-cooordinate
 	 * @param y
+	 *            y-cooordinate
 	 * @return true if the shape was moved
 	 */
 	public boolean moveShapeToLocation(int x, int y) {
@@ -160,6 +164,9 @@ public class BoundedShape extends MoveableShape {
 	}
 
 	/**
+	 * 
+	 * @param otherShape
+	 *            BoundedShape object
 	 * @return true if the otherShape intersects this shapes intersection
 	 *         rectangle
 	 */
@@ -171,6 +178,7 @@ public class BoundedShape extends MoveableShape {
 
 	/**
 	 * @param otherShape
+	 *            BoundedShape
 	 * @return true if the y coordinate of this is less than the y coordinate of
 	 *         otherShape
 	 */
@@ -183,6 +191,7 @@ public class BoundedShape extends MoveableShape {
 
 	/**
 	 * @param otherShape
+	 *            BoundedShape
 	 * @return true if the y coordinate of this is greater than the y coordinate
 	 *         of otherShape
 	 */
@@ -195,6 +204,7 @@ public class BoundedShape extends MoveableShape {
 
 	/**
 	 * @param otherShape
+	 *            BoundedShape
 	 * @return true if the x coordinate of this is less than the x coordinate of
 	 *         otherShape
 	 */
@@ -207,6 +217,7 @@ public class BoundedShape extends MoveableShape {
 
 	/**
 	 * @param otherShape
+	 *            BoundedShape
 	 * @return true if the x coordinate of this is greater than the x coordinate
 	 *         of otherShape
 	 */
@@ -219,6 +230,7 @@ public class BoundedShape extends MoveableShape {
 
 	/**
 	 * @param otherShape
+	 *            BoundedShape
 	 * @return true if the center point if the other shape is inside the bounds
 	 *         of this shape
 	 */
