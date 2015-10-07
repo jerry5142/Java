@@ -15,6 +15,7 @@ import javax.swing.JPanel;
 
 import s_sounds.OverWorldSounds;
 import s_sounds.SoundClipPlayer;
+import a_marblesolitare.MarbleSolitare;
 import b_models.BoundedShape;
 import b_models.Maze;
 import b_models.SpaceShip;
@@ -153,6 +154,10 @@ public class GamePanel extends JFrame {
 
 		// Create game launchers
 		Room room = null;
+
+		room = maze.getRoom(0);
+		room.getLeftDoor().setGame(
+				new MarbleSolitare(this, maze, room.getLeftDoor()));
 		// for (int i = 0; i < maze.getNumberOfRooms(); i++) {
 		// room = maze.getRoom(i);
 		// room.getLeftDoor().setGame(
