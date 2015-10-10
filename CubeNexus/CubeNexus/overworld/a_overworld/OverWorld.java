@@ -46,7 +46,7 @@ public class OverWorld {
 	/**
 	 * Initial player speed
 	 */
-	private static final int initialPlayerSpeed = 5;
+	private static final int initialPlayerSpeed = 6;
 
 	/**
 	 * Screen refresh delay in milliseconds

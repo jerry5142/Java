@@ -5,11 +5,10 @@ import i_images.OverWorldImages;
 import java.awt.Rectangle;
 import java.util.ArrayList;
 
-import javax.sound.sampled.Clip;
-
+import s_sounds.OverWorldSounds;
 import t_templates.Shape;
 
-public class SpaceShip extends NoisyShape {
+public class Player extends NoisyShape {
 
 	/**
 	 * 
@@ -72,9 +71,9 @@ public class SpaceShip extends NoisyShape {
 	 * @param enclosure
 	 * @param defaultSound
 	 */
-	public SpaceShip(int x, int y, int width, int height, int maxSpeed,
+	public Player(int x, int y, int width, int height, int maxSpeed,
 			OverWorldImages imageType, String popupMessage,
-			Rectangle enclosure, Clip defaultSound) {
+			Rectangle enclosure, OverWorldSounds defaultSound) {
 		super(x, y, width, height, imageType, popupMessage, enclosure,
 				defaultSound);
 

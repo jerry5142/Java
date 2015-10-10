@@ -15,6 +15,8 @@ import javax.sound.sampled.UnsupportedAudioFileException;
  * 
  */
 public enum OverWorldSounds {
+	ZOMBIE("zombie", "pitarra-take-sound.wav"),
+
 	BACKGROUND("background", "music-pitarra-1-short.wav"),
 
 	HIGHLIGHT("highlight", "pitarra-highlight-sound.wav"),

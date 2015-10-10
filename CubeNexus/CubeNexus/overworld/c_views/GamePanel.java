@@ -18,8 +18,9 @@ import s_sounds.SoundClipPlayer;
 import a_marblesolitare.MarbleSolitare;
 import b_models.BoundedShape;
 import b_models.Maze;
-import b_models.SpaceShip;
+import b_models.Player;
 import b_models.Room;
+import b_models.SelfMovingShape;
 import d_controllers.PlayerController;
 
 /**
@@ -89,9 +90,10 @@ public class GamePanel extends JFrame {
 		Rectangle roomSize = maze.getRoomSize();
 
 		// add player
-		maze.setPlayer(new SpaceShip(20, 20, 30, 50, playerSpeed,
+		maze.setPlayer(new Player(20, 20, 30, 50, playerSpeed,
 				OverWorldImages.PLAYERDOWN, "Hi", roomSize,
-				OverWorldSounds.HIGHLIGHT.getSoundClip()));
+				OverWorldSounds.HIGHLIGHT));
+
 		// main directions
 		maze.getPlayer().setImageDown(OverWorldImages.PLAYERDOWN);
 		maze.getPlayer().setImageUp(OverWorldImages.PLAYERUP);
@@ -184,9 +186,10 @@ public class GamePanel extends JFrame {
 		room.addShape(new BoundedShape(60, 400, 60, 60,
 				OverWorldImages.PLAYERSPIN, "what am I", maze.getRoomSize()));
 
-		room = maze.getRoom(rand.nextInt(maze.getNumberOfRooms()));
-		room.addShape(new BoundedShape(60, 400, 60, 60, OverWorldImages.ZOMBIE,
-				"Brains!", maze.getRoomSize()));
+		room = maze.getRoom(0);
+		room.addShape(new SelfMovingShape(300, 300, 60, 60, 20,
+				OverWorldImages.ZOMBIE, "Brains!", maze.getRoomSize(),
+				OverWorldSounds.ZOMBIE));
 	}
 
 	/**

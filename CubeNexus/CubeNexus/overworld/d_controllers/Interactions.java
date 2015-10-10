@@ -8,7 +8,7 @@ import b_models.BoundedShape;
 import b_models.CollectibleShape;
 import b_models.Door;
 import b_models.Maze;
-import b_models.SpaceShip;
+import b_models.Player;
 import c_views.GamePanel;
 
 /**
@@ -28,7 +28,7 @@ public class Interactions {
 	 * @param shape
 	 * @param g
 	 */
-	public static void interact(Maze maze, GamePanel view, SpaceShip player,
+	public static void interact(Maze maze, GamePanel view, Player player,
 			BoundedShape shape, Graphics g) {
 		// pause screen refresh
 		view.getAnimator().setPaused(true);

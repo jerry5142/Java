@@ -4,10 +4,15 @@ import i_images.OverWorldImages;
 
 import java.awt.Rectangle;
 
-import javax.sound.sampled.Clip;
-
+import s_sounds.OverWorldSounds;
 import s_sounds.SoundClipPlayer;
 
+/**
+ * Shapes with the ability to play sounds
+ * 
+ * @author me
+ *
+ */
 public class NoisyShape extends BoundedShape {
 
 	private static final long serialVersionUID = 1L;
@@ -35,13 +40,17 @@ public class NoisyShape extends BoundedShape {
 	 */
 	public NoisyShape(int x, int y, int width, int height,
 			OverWorldImages imageType, String popupMessage,
-			Rectangle enclosure, Clip defaultSound) {
+			Rectangle enclosure, OverWorldSounds defaultSound) {
 		super(x, y, width, height, imageType, popupMessage, enclosure);
 
-		this.soundPlayer = new SoundClipPlayer(defaultSound);
-		Thread soundThread = new Thread(soundPlayer);
-		soundThread.run();
-		this.mute = false;
+		this.mute = true;
+
+		if (defaultSound != null) {
+			this.soundPlayer = new SoundClipPlayer(defaultSound.getSoundClip());
+			Thread soundThread = new Thread(soundPlayer);
+			soundThread.run();
+			this.mute = false;
+		}
 	}
 
 	/**

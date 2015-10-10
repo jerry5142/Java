@@ -25,7 +25,7 @@ public class Maze {
 	/**
 	 * Player object
 	 */
-	private SpaceShip player;
+	private Player player;
 
 	/**
 	 * Determines the size of the rooms
@@ -138,7 +138,7 @@ public class Maze {
 	/**
 	 * @return the player
 	 */
-	public SpaceShip getPlayer() {
+	public Player getPlayer() {
 		return player;
 	}
 
@@ -146,7 +146,7 @@ public class Maze {
 	 * @param player
 	 *            the player to set
 	 */
-	public void setPlayer(SpaceShip player) {
+	public void setPlayer(Player player) {
 		if (player == null)
 			return;
 		this.player = player;

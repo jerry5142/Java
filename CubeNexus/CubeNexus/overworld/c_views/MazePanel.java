@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import a_overworld.OverWorld;
 import b_models.BoundedShape;
 import b_models.Maze;
-import b_models.SpaceShip;
+import b_models.Player;
 import b_models.Room;
 import d_controllers.Interactions;
 
@@ -40,7 +40,7 @@ public class MazePanel extends JPanel {
 	/**
 	 * Holds the player object
 	 */
-	private SpaceShip player;
+	private Player player;
 
 	/**
 	 * Holds the shape the player may be interacting with at a given time
