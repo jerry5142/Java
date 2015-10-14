@@ -7,7 +7,7 @@ import java.io.File;
 /**
  * Holds the images for the OverWorld.
  * 
- * Syntax: ENUMIMAGENAME(String imageName, String iconFileName),
+ * Syntax: ENUMIMAGENAME(String imageDescription, String iconFileName),
  * 
  * The last entry ends with a semicolon
  * 
@@ -17,6 +17,8 @@ import java.io.File;
 public enum OverWorldImages {
 
 	PLAYERSPIN("spinning player", "spinningplayer.gif"),
+	
+	PLAYERDEAD("dead player", "playerDead.gif"),
 
 	ZOMBIE("zombie", "zombie.gif"),
 

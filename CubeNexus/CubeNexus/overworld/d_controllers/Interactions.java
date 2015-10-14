@@ -4,6 +4,8 @@ import i_images.OverWorldImages;
 
 import java.awt.Graphics;
 
+import s_sounds.OverWorldSounds;
+import s_sounds.SoundClipPlayer;
 import b_models.BoundedShape;
 import b_models.CollectibleShape;
 import b_models.Door;
@@ -90,6 +92,9 @@ public class Interactions {
 			switch (shape.getImageType()) {
 			case ROBOT:
 			case WIZARD:
+			case ZOMBIE:
+				shape.showMessage(g);
+				player.killPlayer();
 
 			default:
 				shape.showMessage(g);

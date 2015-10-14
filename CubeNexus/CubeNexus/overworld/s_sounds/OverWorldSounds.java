@@ -15,7 +15,9 @@ import javax.sound.sampled.UnsupportedAudioFileException;
  * 
  */
 public enum OverWorldSounds {
-	ZOMBIE("zombie", "pitarra-take-sound.wav"),
+	SCREAM("woman screaming", "Female Scream-SoundBible.com-237334261.wav"),
+	
+	ZOMBIE("zombie", "Zombie Back From Dead-SoundBible.com-434320742.wav"),
 
 	BACKGROUND("background", "music-pitarra-1-short.wav"),
 

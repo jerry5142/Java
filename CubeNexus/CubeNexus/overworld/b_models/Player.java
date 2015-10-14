@@ -6,6 +6,7 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 
 import s_sounds.OverWorldSounds;
+import s_sounds.SoundClipPlayer;
 import t_templates.Shape;
 
 public class Player extends NoisyShape {
@@ -51,6 +52,11 @@ public class Player extends NoisyShape {
 	private boolean moveRt;
 
 	/**
+	 * Indicates if the player is alive or dead
+	 */
+	private boolean isAlive;
+
+	/**
 	 * Holds the animated .gif images used to display the player in the left,
 	 * left upper diagonal, up, right upper diagonal, right, right lower
 	 * diagonal, down, and left lower diagonal positions.
@@ -87,6 +93,9 @@ public class Player extends NoisyShape {
 		this.moveDn = false;
 		this.moveLt = false;
 		this.moveRt = false;
+
+		this.isAlive = true;
+
 		this.imageLeft = null;
 		this.imageRight = null;
 		this.imageUp = null;
@@ -96,17 +105,6 @@ public class Player extends NoisyShape {
 		this.imageLowerLeft = null;
 		this.imageLowerRight = null;
 	}
-
-	/**
-	 * Allows the player to move even if it is intersecting another shape
-	 */
-	public void unfreeze() {
-		setMoveable(true);
-	}
-
-	/**
-	 * @return
-	 */
 
 	/**
 	 * 
@@ -300,13 +298,32 @@ public class Player extends NoisyShape {
 	}
 
 	/**
+	 * Stops the player and plays the death sound
+	 */
+	public void killPlayer() {
+		if (!isAlive) {
+			return;
+		}
+		stopPlayer();
+		setImageType(OverWorldImages.PLAYERDEAD);
+		SoundClipPlayer scp = this.getSoundPlayer();
+		scp.setSoundClip(OverWorldSounds.SCREAM.getSoundClip());
+		scp.play();
+		this.isAlive = false;
+	}
+
+	/**
 	 * Stops the player's movement
 	 */
 	public void stopPlayer() {
-		this.moveDn = false;
-		this.moveUp = false;
-		this.moveLt = false;
-		this.moveRt = false;
+		setMoveable(false);
+	}
+
+	/**
+	 * Start the player's movement
+	 */
+	public void startPlayer() {
+		setMoveable(true);
 	}
 
 	/**
