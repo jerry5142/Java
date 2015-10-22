@@ -29,6 +29,10 @@ public abstract class Menus<T extends JFrame> implements ActionListener {
 
 		PAUSEGAME("Toggle pause", 'P', false),
 
+		NEWGAME("New Game", 'N', false),
+
+		NEWLIFE("New Life", 'L', false),
+		
 		EXIT("Exit", 'E', false),
 
 		SOUND("Sound", 'S', true),

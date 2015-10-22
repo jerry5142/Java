@@ -39,12 +39,15 @@ public class SelfMovingShape extends Player {
 				enclosure, defaultSound);
 
 		this.rand = new Random();
-		this.counter = this.countMax = 1;
+		this.counter = this.countMax = 50;
 
 		this.setMoveUp(true);
 		this.setMoveDn(false);
 		this.setMoveLt(false);
 		this.setMoveRt(false);
+
+		this.setMoveable(true);
+		this.setMoveSpeed(maxSpeed);
 	}
 
 	/**
@@ -52,46 +55,48 @@ public class SelfMovingShape extends Player {
 	 */
 	public void moveRandomly() {
 		if (this.counter-- > 0) {
+			this.movePlayer();
 			return;
 		}
+		this.countMax = 0 + rand.nextInt(75);
 		this.counter = this.countMax;
+		this.setMoveSpeed(1 + rand.nextInt(10));
 
-		do {
-//			boolean onOrOff = rand.nextBoolean();
+		this.setMoveUp(false);
+		this.setMoveDn(false);
+		this.setMoveLt(false);
+		this.setMoveRt(false);
 
-			// switch (rand.nextInt(3)) {
-			// case 0:
-			// this.setMoveUp(onOrOff);
-			// break;
-			// case 1:
-			// this.setMoveDn(onOrOff);
-			// break;
-			// case 2:
-			// this.setMoveLt(onOrOff);
-			// break;
-			// case 3:
-			// this.setMoveRt(onOrOff);
-			// break;
-			// }
-
-			// boolean onOrOff = rand.nextBoolean();
-			//
-			// switch (rand.nextInt(1)) {
-			// case 0:
-			// this.setMoveUp(onOrOff);
-			// this.setMoveDn(!onOrOff);
-			// break;
-			// case 1:
-			// this.setMoveLt(onOrOff);
-			// this.setMoveRt(!onOrOff);
-			// break;
-			// }
-			//
-			this.setMoveUp(rand.nextBoolean());
-			this.setMoveDn(rand.nextBoolean());
-			this.setMoveLt(rand.nextBoolean());
-			this.setMoveRt(rand.nextBoolean());
-		} while (!this.movePlayer());
+		switch (rand.nextInt(7)) {
+		case 0: // move up
+			this.setMoveUp(true);
+			break;
+		case 1: // move up right
+			this.setMoveUp(true);
+			this.setMoveRt(true);
+			break;
+		case 2: // move right
+			this.setMoveRt(true);
+			break;
+		case 3: // move dn right
+			this.setMoveDn(true);
+			this.setMoveRt(true);
+			break;
+		case 4: // move dn
+			this.setMoveDn(true);
+			break;
+		case 5: // move dn left
+			this.setMoveDn(true);
+			this.setMoveLt(true);
+			break;
+		case 6: // move left
+			this.setMoveLt(true);
+			break;
+		case 7: // move up left
+			this.setMoveUp(true);
+			this.setMoveLt(true);
+			break;
+		}
 	}
 
 	@Override

@@ -4,13 +4,12 @@ import i_images.OverWorldImages;
 
 import java.awt.Graphics;
 
-import s_sounds.OverWorldSounds;
-import s_sounds.SoundClipPlayer;
 import b_models.BoundedShape;
 import b_models.CollectibleShape;
 import b_models.Door;
 import b_models.Maze;
 import b_models.Player;
+import b_models.SelfMovingShape;
 import c_views.GamePanel;
 
 /**
@@ -93,9 +92,11 @@ public class Interactions {
 			case ROBOT:
 			case WIZARD:
 			case ZOMBIE:
-				shape.showMessage(g);
+				SelfMovingShape zombie = (SelfMovingShape) shape;
+				zombie.showMessage(g);
 				player.killPlayer();
-
+				zombie.stopPlayer();
+				break;
 			default:
 				shape.showMessage(g);
 				break;

@@ -187,7 +187,7 @@ public class GamePanel extends JFrame {
 				OverWorldImages.PLAYERSPIN, "what am I", maze.getRoomSize()));
 
 		room = maze.getRoom(0);
-		room.addShape(new SelfMovingShape(300, 300, 60, 60, 20,
+		room.addShape(new SelfMovingShape(300, 300, 60, 60, 1,
 				OverWorldImages.ZOMBIE, "Brains!", maze.getRoomSize(),
 				OverWorldSounds.ZOMBIE));
 	}

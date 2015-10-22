@@ -43,6 +43,15 @@ public class MenuHandler extends Menus<JFrame> {
 
 		switch (menuItem) {
 
+		case NEWGAME:
+
+			break;
+
+		case NEWLIFE:
+			maze.getPlayer().startPlayer();
+//			view.repaint();
+			break;
+
 		case PAUSEGAME:
 			boolean isPaused = view.getAnimator().isPaused();
 			if (isPaused) {// restart if currently paused

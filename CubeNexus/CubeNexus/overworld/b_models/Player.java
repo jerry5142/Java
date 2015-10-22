@@ -323,6 +323,8 @@ public class Player extends NoisyShape {
 	 * Start the player's movement
 	 */
 	public void startPlayer() {
+		this.moveShapeToLocation(20, 20);
+		// this.isAlive = true;
 		setMoveable(true);
 	}
 
