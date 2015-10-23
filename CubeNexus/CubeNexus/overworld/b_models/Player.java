@@ -305,11 +305,34 @@ public class Player extends NoisyShape {
 			return;
 		}
 		stopPlayer();
+		// rotate the orientation by 90 degrees
+		this.setBounds(this.getBounds().y, this.getBounds().x,
+				this.getBounds().height, this.getBounds().width);
 		setImageType(OverWorldImages.PLAYERDEAD);
 		SoundClipPlayer scp = this.getSoundPlayer();
 		scp.setSoundClip(OverWorldSounds.SCREAM.getSoundClip());
 		scp.play();
 		this.isAlive = false;
+	}
+
+	/**
+	 * Revives the player the player and plays the death sound
+	 */
+	public void revivePlayer() {
+		if (this.isAlive)
+			return;
+
+		// rotate the orientation by 90 degrees
+		this.setBounds(this.getBounds().y, this.getBounds().x,
+				this.getBounds().height, this.getBounds().width);
+
+		setImageType(OverWorldImages.PLAYERDOWN);
+		SoundClipPlayer scp = this.getSoundPlayer();
+		scp.setSoundClip(OverWorldSounds.HIGHLIGHT.getSoundClip());
+		scp.play();
+		this.startPlayer();
+		this.moveShapeToLocation(20, 20);
+		this.isAlive = true;
 	}
 
 	/**
@@ -323,7 +346,6 @@ public class Player extends NoisyShape {
 	 * Start the player's movement
 	 */
 	public void startPlayer() {
-		this.moveShapeToLocation(20, 20);
 		// this.isAlive = true;
 		setMoveable(true);
 	}

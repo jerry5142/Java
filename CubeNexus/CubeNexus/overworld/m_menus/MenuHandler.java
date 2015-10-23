@@ -48,8 +48,8 @@ public class MenuHandler extends Menus<JFrame> {
 			break;
 
 		case NEWLIFE:
-			maze.getPlayer().startPlayer();
-//			view.repaint();
+			maze.getPlayer().revivePlayer();
+			view.repaint();
 			break;
 
 		case PAUSEGAME:

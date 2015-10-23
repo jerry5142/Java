@@ -160,17 +160,6 @@ public class GamePanel extends JFrame {
 		room = maze.getRoom(0);
 		room.getLeftDoor().setGame(
 				new MarbleSolitare(this, maze, room.getLeftDoor()));
-		// for (int i = 0; i < maze.getNumberOfRooms(); i++) {
-		// room = maze.getRoom(i);
-		// room.getLeftDoor().setGame(
-		// new Launcher2048(this, maze, room.getLeftDoor()));
-		// room.getRightDoor().setGame(
-		// new Launcher2048(this, maze, room.getRightDoor()));
-		// room.getTopDoor().setGame(
-		// new LauncherNS(this, maze, room.getTopDoor()));
-		// room.getBottomDoor().setGame(
-		// new LauncherNS(this, maze, room.getBottomDoor()));
-		// }
 
 		room = maze.getRoom(rand.nextInt(maze.getNumberOfRooms()));
 		room.addShape(new BoundedShape(60, 300, 60, 60, OverWorldImages.WIZARD,
@@ -186,7 +175,7 @@ public class GamePanel extends JFrame {
 		room.addShape(new BoundedShape(60, 400, 60, 60,
 				OverWorldImages.PLAYERSPIN, "what am I", maze.getRoomSize()));
 
-		room = maze.getRoom(0);
+		room = maze.getRoom(1);
 		room.addShape(new SelfMovingShape(300, 300, 60, 60, 1,
 				OverWorldImages.ZOMBIE, "Brains!", maze.getRoomSize(),
 				OverWorldSounds.ZOMBIE));
