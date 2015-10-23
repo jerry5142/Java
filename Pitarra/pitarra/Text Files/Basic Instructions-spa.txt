@@ -1,0 +1,8 @@
+Cómo jugar:
+
+1. Al comienzo del juego, cada jugador tiene 12 fichas.
+
+2. En cada turno, un jugador coloca una ficha en el tablero.
+
+3. El primer jugador que alinear 3 fichas en una fila (vertical
+    horizontal o diagonal), gana el juego.

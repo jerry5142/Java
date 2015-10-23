@@ -1,0 +1,19 @@
+Reglamento
+
+1. Para iniciar el juego, se hace por medio de un volado o sorteo, 
+   quien gana usa las fichas claras, es quien inicia el juego.
+
+2. Se colocan alternativamente las piezas en las intersecciones 
+   para formar tercias en forma horizontal, vertical o diagonal. 
+   Cuando se hace una tercia se grita: pitzahua! Y se toma una ficha 
+   contraria.
+
+3. Una vez puestas todas las fichas en el tablero se hacen los 
+   movimientos en los espacios libres, no se pueden saltar las 
+   fichas propias y contrarias.
+
+4. Gana el que tiene mas piezas por inamovilidad del contrario o 
+   cuando este se quede con dos fichas.
+
+5. Hay empate cuando: se terminan de colocar las piezas y nadie a 
+   formado una tercia, por acuerdo de igualdad en fichas e inamovilidad. 

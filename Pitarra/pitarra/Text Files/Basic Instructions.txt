@@ -1,0 +1,8 @@
+How To Play:
+
+1. At the start of the game, each player has 12 tokens.
+
+2. Each turn, a player places a token on the board.
+
+3. The first player to line up 3 tokens in a row (vertically 
+   horizontally or diagonally) wins the game.

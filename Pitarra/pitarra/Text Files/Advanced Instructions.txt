@@ -1,0 +1,22 @@
+Rules
+
+1. To initiate the game, a coin toss takes place to see which player
+   wins the light color corn kernel. The light color always begins. 
+
+2. Players then take turns to add their colored corn kernels on the 
+   board, trying to form a straight line with three kernels. These 
+   lines can be vertical, horizontal, or diagonal. If a Player gets 
+   forms a straight line he/she must yell: pitzahua. I take a way an 
+   opponents kernel from the board.
+
+3. If all corn kernels are on the board, the players may slide kernels 
+   to adjacent spaces. Players may not jump any kernels.
+
+4. A player is considered a winner if:
+
+     a. She/he has collected the most opponent kernels, or 
+     b. His/her opponent has only two kernels on the board
+
+5. There is a tie when all kernels have been placed on the board 
+   and no player has been able to form a straight line with three 
+   kernels. 
