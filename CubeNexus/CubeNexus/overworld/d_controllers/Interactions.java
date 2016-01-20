@@ -29,8 +29,7 @@ public class Interactions {
 	 * @param shape
 	 * @param g
 	 */
-	public static void interact(Maze maze, GamePanel view, Player player,
-			BoundedShape shape, Graphics g) {
+	public static void interact(Maze maze, GamePanel view, Player player, BoundedShape shape, Graphics g) {
 		// pause screen refresh
 		view.getAnimator().setPaused(true);
 
@@ -54,8 +53,7 @@ public class Interactions {
 						door.getOtherSideOfDoor().setLocked(false);
 						player.removeShape(OverWorldImages.KEYGOLD);
 					} else {
-						if (door.getGame() != null
-								&& player.isCenteredOnShape(door)) {
+						if (door.getGame() != null && player.isCenteredOnShape(door)) {
 							door.playGame();
 						}
 					}
@@ -89,14 +87,15 @@ public class Interactions {
 			}
 		} else {
 			switch (shape.getImageType()) {
-			case ROBOT:
-			case WIZARD:
 			case ZOMBIE:
 				SelfMovingShape zombie = (SelfMovingShape) shape;
 				zombie.showMessage(g);
 				player.killPlayer();
 				zombie.stopPlayer();
 				break;
+			case ROBOT:
+			case WIZARD:
+
 			default:
 				shape.showMessage(g);
 				break;
@@ -114,8 +113,7 @@ public class Interactions {
 		try {
 			Thread.sleep(milliseconds);
 		} catch (InterruptedException e) {
-			System.err.println("Error when trying to sleep for " + milliseconds
-					+ " milliseconds.");
+			System.err.println("Error when trying to sleep for " + milliseconds + " milliseconds.");
 		}
 	}
 

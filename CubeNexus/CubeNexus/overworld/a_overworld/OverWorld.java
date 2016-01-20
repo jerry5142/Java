@@ -41,7 +41,7 @@ public class OverWorld {
 	/**
 	 * Number of rows/columns in maze. Total rooms = mazeRows*mazeRows
 	 */
-	private static final int mazeRows = 5;
+	private static final int mazeRows = 2;
 
 	/**
 	 * Initial player speed
